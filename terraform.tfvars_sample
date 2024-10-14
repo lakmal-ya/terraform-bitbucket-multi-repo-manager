@@ -1,0 +1,122 @@
+# Bitbucket provider credentials
+provider_username = "bitubcket_username"
+provider_app_key = "abc123131sdfwsfs"
+
+# Workspace, project details
+workspace_name = "devops-corporation"
+project_name = "devops-testing"
+project_key = "DEVOPS"
+
+# Repository details
+repositories = {
+  repo1 = {
+    name        = "devops-testing-repo-1"
+    slug        = "devops-1"
+    language    = "python"
+    description = "This is repository one."
+    variables = {
+      AWS_REGION = {
+        key     = "AWS_REGION"
+        value   = "ap-southeast-2"
+        secured = true
+      },
+      ENVIRONMENT = {
+        key     = "ENVIRONMENT"
+        value   = "production"
+        secured = false
+      }
+    }
+    deployments = {
+      deploy1 = {
+        name  = "demo"
+        stage = "Test"
+        variables = {
+          AWS_REGION = {
+            key     = "AWS_REGION"
+            value   = "ap-southeast-2"
+            secured = true
+          },
+          ENVIRONMENT = {
+            key     = "ENVIRONMENT"
+            value   = "production"
+            secured = false
+          }
+        }
+      }
+    }
+  },
+  repo2 = {
+    name        = "devops-testing-repo-2"
+    slug        = "devops-2"
+    language    = "javascript"
+    description = "This is repository two."
+    variables = {
+      ENVIRONMENT = {
+        key     = "ENVIRONMENT"
+        value   = "production"
+        secured = false
+      }
+    }
+    deployments = {
+      deploy2 = {
+        name  = "demo"
+        stage = "Staging"
+        variables = {
+          DEPLOY_VAR_3 = {
+            key     = "DEPLOY_VAR_3"
+            value   = "deploy_value_3"
+            secured = true
+          }
+        }
+      }
+    }
+  },
+  repo3 = {
+    name        = "devops-testing-repo-3"
+    slug        = "devops-3"
+    language    = "nodejs"
+    description = "This is repository three."
+    variables = {
+      ENVIRONMENT = {
+        key     = "ENVIRONMENT"
+        value   = "production"
+        secured = false
+      }
+    }
+    deployments = {
+      deploy1 = {
+        name  = "demo"
+        stage = "Production"
+        variables = {
+          DEPLOY_VAR_3 = {
+            key     = "DEPLOY_VAR_3"
+            value   = "deploy_value_3"
+            secured = true
+          }
+        }
+      },
+      deploy2 = {
+        name  = "demo-2"
+        stage = "Staging"
+        variables = {
+          DEPLOY_VAR_3 = {
+            key     = "DEPLOY_VAR_3"
+            value   = "deploy_value_3"
+            secured = true
+          }
+        }
+      },
+      deploy3 = {
+        name  = "demo-3"
+        stage = "Test"
+        variables = {
+          DEPLOY_VAR_3 = {
+            key     = "DEPLOY_VAR_3"
+            value   = "deploy_value_3"
+            secured = false
+          }
+        }
+      }
+    }
+  }
+}
